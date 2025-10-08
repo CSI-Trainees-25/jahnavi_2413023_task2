@@ -1,0 +1,204 @@
+body {
+    border: 2px solid purple;
+    border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6fa;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5b2198;
+  color: white;
+  padding: 12px 20px;
+  margin: 20px;
+}
+
+#input {
+  margin: 2px 2px;
+  text-align: center;
+  font-weight: 600;
+  background-color: rgb(144, 32, 193);
+  color: white;
+  height: 10vh;
+  width: 15vh;
+  
+}
+
+.header button {
+
+  background: rgb(144, 32, 193);
+  color: #ebeff3;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.header button:hover {
+  background-color: #480466;
+}
+
+/* Layout split */
+.main-container {
+  display: flex;
+  height: calc(100vh - 64px);
+}
+
+.task-list {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+}
+
+/* Task Card */
+.task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.task-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.task-card input[type="text"],
+.task-card input[type="date"]
+{
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.task-card select {
+    width: 35%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+}
+
+.select-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Do Now container */
+.do-now {
+    border-radius: 10px;
+    flex: 1;
+  background: #ffffff;
+  padding: 2px;
+  border-left: 2px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+
+
+
+#do-now #Defaultval {
+    margin-left: 50%;
+    text-align:center;
+    justify-content: center;
+  flex: 1;
+}
+
+.do-now button,
+.do-now #setTimerBtn {
+    border-radius: 10px;
+height: 6vh;
+width:100%;
+display:flex;
+justify-content: center;
+position : relative;
+font-weight: 400;
+ text-align: center;
+  margin-top:0px;
+  padding: 0px;
+  background-color: #9f179a;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#do-now button:hover,
+#do-now #setTimerBtn:hover {
+  background-color: #0056b3;
+}
+/* changes done on css for the set timer working part*/
+/* #timerDisplay {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
+} */
+
+#taskCompletedBtn {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+#taskCompletedBtn:hover {
+  background-color: #218838;
+}
+/* futher change*/
+#timerDisplay {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff5722;
+  text-align: center;
+}
+/* Priority colors*/
+.priority-high {
+  background-color: #ff6b6b; /* red */
+  color: white ;
+}
+.priority-medium {
+  background-color: #f4c90b ; /* yellow */
+  color: #fff ;
+}
+.priority-low {
+  background-color: #bdbdbd ; /* grey */
+  color: white ;
+}
+
+/* Status colors */
+.status-done {
+  background-color: #4caf50 ; /* green */
+  color: white ;
+}
+.status-progress {
+  background-color: #033a79 ; /* dark blue */
+  color: white ;
+}
+.status-not {
+  background-color: #9e9e9e ; /* grey */
+  color: white;
+}
